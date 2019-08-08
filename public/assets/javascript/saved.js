@@ -145,7 +145,7 @@ $(document).ready(function() {
     $.get("/api/notes/" + currentArticle._id).then(function(data) {
       // Constructing our initial HTML to add to the notes modal
       var modalText = $("<div class='container-fluid text-center'>").append(
-        $("<h4>").text("Notes For Article: " + currentArticle._id),
+        $("<h4>").text(currentArticle._id),
         $("<hr>"),
         $("<ul class='list-group note-container'>"),
         $("<textarea placeholder='New Note' rows='4' cols='60'>"),

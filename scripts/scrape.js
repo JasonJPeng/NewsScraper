@@ -11,6 +11,7 @@ var scrape = function() {
   return axios.get("http://www.nytimes.com").then(function(res) {
     var $ = cheerio.load(res.data);
     console.log("scraping");
+    console.log(res.data);
     // Make an empty array to save our article info
     var articles = [];
 
@@ -35,6 +36,10 @@ var scrape = function() {
         .find("p")
         .text()
         .trim();
+      
+      var img = $(this)
+         .find("img")
+         .attr("src");  
 
       // So long as our headline and sum and url aren't empty or undefined, do the following
       if (head && sum && url) {
@@ -47,6 +52,7 @@ var scrape = function() {
         var dataToAdd = {
           headline: headNeat,
           summary: sumNeat,
+          img_url: img,
           url: "https://www.nytimes.com" + url
         };
 

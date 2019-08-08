@@ -26,6 +26,7 @@ var headlineSchema = new Schema({
     },  
   // date is just a string
     date: String,
+    img_url: String,
   // saved, boolean default false
     saved: {
       type: Boolean,

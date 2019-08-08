@@ -167,3 +167,30 @@ textarea {
   position: relative;
   bottom: 10px;
 }
+
+.jumbotron {
+  height: 100px;
+  padding: 10px;
+}
+
+.caption h1 {
+  font-size: 26pt;
+}
+
+.card-body {
+  /* border: 2px solid green; */
+  float: left;
+}
+
+.card-body img {
+  margin: 0 10px 0 0;
+}
+
+.card-header {
+  /* height: 15px; */
+  /* border: 2px solid red; */
+}
+
+.save {
+  /* height: 10px; */
+}
